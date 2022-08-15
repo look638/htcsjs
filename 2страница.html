@@ -5,8 +5,32 @@
     <meta charset="utf-8" />
     <title>2 страница</title>
     <link href="StyleSheet1.css" rel="stylesheet" />
+    
 </head>
-<body>
+
+<style>
+    html {
+      font-family: sans-serif;
+    }
+
+    body {
+      width: 50%;
+      max-width: 800px;
+      min-width: 480px;
+      margin: 0 auto;
+    }
+    
+    .form input[type="number"] {
+      width: 200px;
+    }
+
+    .lastResult {
+      color: white;
+      padding: 3px;
+    }
+  </style>
+
+<body bgcolor = "white">
 
     <table cellspacing="20">
         <tr>
@@ -21,8 +45,30 @@
         </li>
     </ul>
     <h3>1 страница</h3>
-        <div class="twostr">
-            <a href="index.html"> 1 страница</a>
+       
+    <h1 align = "center">Угадай число</h1>
+    <p>Будет выбрано случайное число от 1 до 100. Проверьте, сможете ли вы угадать его за 10 ходов или меньше. <br>
+        Мы сообщим вам, была ли ваша догадка слишком высокой или слишком низкой.</p>
+        
+        <div>
+            <label for="guessField">Введите число:</label>
+            <input type="number" min="1" max="100" required id="guessField" class="guessField">
+            <input type="submit" value="Выбрать" class="guessSubmit">
         </div>
+
+        <div class="resultParas">
+            <p class="guesses"></p>
+            <p class="lastResult"></p>
+            <p class="lowOrHi"></p>
+        </div>
+       
+
+<div style = "margin-bottom: 200px;"></div>
+        <div class="twostr">
+            <a class="ccl2" href="index.html"> 1страница</a>
+
+           
+        </div>
+        <script src="угадай число.js"></script>
 </body>
 </html>
